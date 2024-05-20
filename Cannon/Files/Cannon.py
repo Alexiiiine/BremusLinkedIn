@@ -146,7 +146,6 @@ def RunIt():
                 "return document.querySelectorAll('.artdeco-card.pv-profile-card.break-words')[0].innerHTML")
         except:
             Detials1 = ''
-
         seed = createSeed({
 
             "Source":source.value,
@@ -158,7 +157,7 @@ def RunIt():
         print(f'created seed {seed["id"]}')
 
         pdl = createEnrichment({
-            "Name":"Test",
+            "Name":f"{source.value}",
             "Seed":seed['id'],
             "Status":"Open",
             "profile_inp":profile_url,
